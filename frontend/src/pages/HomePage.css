@@ -1,0 +1,194 @@
+/* src/pages/HomePage.css — Netflix Styled Homepage */
+.netflix-home {
+  position: relative;
+  padding-bottom: 80px;
+}
+
+/* Billboard Hero Banner */
+.netflix-hero {
+  position: relative;
+  height: 85vh;
+  min-height: 550px;
+  max-height: 800px;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 60px;
+  margin-top: -68px; /* Offset fixed header */
+  overflow: hidden;
+}
+
+.netflix-hero__backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.netflix-hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  filter: brightness(0.7);
+}
+
+.netflix-hero__vignette {
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(180deg, rgba(20, 20, 20, 0.4) 0%, rgba(20, 20, 20, 0) 50%, #141414 100%),
+    linear-gradient(90deg, #141414 0%, rgba(20, 20, 20, 0.7) 40%, rgba(20, 20, 20, 0) 70%);
+}
+
+.netflix-hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.netflix-hero__brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.netflix-n-badge {
+  color: #E50914;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.netflix-brand-type {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #e5e5e5;
+}
+
+.netflix-hero__title {
+  font-size: 52px;
+  font-weight: 900;
+  line-height: 1.1;
+  color: #ffffff;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
+}
+
+.netflix-hero__meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.hero-year, .hero-rating {
+  color: #e5e5e5;
+  font-weight: 600;
+}
+
+.netflix-hero__synopsis {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #e5e5e5;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
+}
+
+.netflix-hero__actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+/* Rows Container */
+.netflix-rows {
+  position: relative;
+  z-index: 2;
+  margin-top: -20px;
+}
+
+.netflix-section {
+  margin-bottom: 48px;
+}
+
+/* Netflix Genre Grid */
+.netflix-genre-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 14px;
+}
+
+.netflix-genre-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 20px 12px;
+  background: #1f1f1f;
+  border: 1px solid #333333;
+  border-radius: 6px;
+  text-align: center;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.netflix-genre-tile:hover {
+  transform: translateY(-4px);
+  background: #2a2a2a;
+  border-color: #E50914;
+}
+
+.genre-icon { font-size: 28px; }
+.genre-name { font-size: 13px; font-weight: 600; color: #ffffff; }
+
+/* Time Widget */
+.netflix-time-widget {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 32px 40px;
+  border-radius: 12px;
+  border: 1px solid #333333;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+  flex-wrap: wrap;
+}
+
+.time-widget__left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.time-widget__emoji {
+  font-size: 48px;
+}
+
+.time-widget__label {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.time-widget__mood {
+  font-size: 13px;
+  color: #aaaaaa;
+  margin-bottom: 4px;
+}
+
+.time-widget__time {
+  font-size: 12px;
+  color: #888888;
+  font-family: monospace;
+}
+
+.time-widget__desc {
+  font-size: 14px;
+  color: #cccccc;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 768px) {
+  .netflix-hero { height: 70vh; }
+  .netflix-hero__title { font-size: 34px; }
+  .netflix-hero__synopsis { display: none; }
+}
