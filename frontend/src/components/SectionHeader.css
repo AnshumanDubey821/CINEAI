@@ -1,0 +1,24 @@
+/* src/components/SectionHeader.css */
+.section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.section-header__title {
+  font-family: var(--font-display);
+  font-size: clamp(20px, 3vw, 26px);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+.section-header__sub {
+  margin-top: 4px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+.section-header__action {
+  flex-shrink: 0;
+  font-size: 13px;
+}
