@@ -1,0 +1,342 @@
+/* src/pages/TimeOfDayPage.css
+   Four distinct sky palettes: warm sunrise, bright afternoon, amber sunset, deep night.
+*/
+
+/* ── Shared container ────────────────────────────────────────────────────── */
+.container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+
+/* ── Page root — palette switching ─────────────────────────────────────────  */
+.tod-page { min-height: 100vh; transition: background 0.8s ease; }
+
+.tod-page--morning   { background: #fff8f0; }
+.tod-page--afternoon { background: #f0f6ff; }
+.tod-page--evening   { background: #1a0e1a; }
+.tod-page--night     { background: #07070f; }
+
+/* ── Sky Hero ─────────────────────────────────────────────────────────────── */
+.tod-hero {
+  position: relative;
+  height: 520px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.sky-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.tod-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 30%,
+    rgba(0,0,0,0.35) 70%,
+    rgba(0,0,0,0.65) 100%
+  );
+}
+
+.tod-hero__content {
+  position: relative;
+  z-index: 1;
+  padding: 0 40px 40px;
+  max-width: 780px;
+  animation: fadeSlideUp 0.6s ease both;
+}
+
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Clock row */
+.tod-hero__clock-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.live-clock {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.95);
+  letter-spacing: 0.05em;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+}
+
+.tod-hero__now-badge {
+  padding: 4px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #fff;
+  backdrop-filter: blur(6px);
+}
+
+.tod-hero__title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: 8px;
+  text-shadow: 0 3px 16px rgba(0,0,0,0.4);
+}
+
+.tod-hero__tagline {
+  font-size: clamp(15px, 2.5vw, 20px);
+  color: rgba(255,255,255,0.82);
+  margin-bottom: 6px;
+  font-style: italic;
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.tod-hero__mood {
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 8px;
+}
+.tod-hero__mood-label { font-weight: 600; margin-right: 4px; color: rgba(255,255,255,0.9); }
+
+.tod-hero__desc {
+  font-size: 14px;
+  color: rgba(255,255,255,0.65);
+  max-width: 540px;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+/* Genre pills in hero */
+.tod-hero__genres { display: flex; flex-wrap: wrap; gap: 8px; }
+.tod-genre-pill {
+  padding: 5px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: #fff;
+  background: rgba(255,255,255,0.12);
+  transition: background 0.2s;
+}
+.tod-genre-pill:hover { background: rgba(255,255,255,0.22); }
+
+/* ── Slot Tabs ────────────────────────────────────────────────────────────── */
+.tod-tabs-wrapper {
+  position: sticky;
+  top: 64px;
+  z-index: 50;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Palette-aware tab strip bg */
+.tod-page--morning   .tod-tabs-wrapper { background: rgba(255,248,240,0.93); }
+.tod-page--afternoon .tod-tabs-wrapper { background: rgba(240,246,255,0.93); }
+.tod-page--evening   .tod-tabs-wrapper { background: rgba(26,14,26,0.95);  }
+.tod-page--night     .tod-tabs-wrapper { background: rgba(7,7,15,0.95);    }
+
+.tod-tabs {
+  display: flex;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  gap: 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.tod-tabs::-webkit-scrollbar { display: none; }
+
+/* Individual tab */
+.slot-tab {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 14px 22px 12px;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+  background: none;
+  border-radius: 0;
+  transition: all 0.22s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.slot-tab__emoji  { font-size: 22px; }
+.slot-tab__label  { font-size: 13px; font-weight: 700; font-family: 'DM Sans', system-ui, sans-serif; }
+.slot-tab__hours  { font-size: 10px; letter-spacing: 0.04em; opacity: 0.55; }
+
+.slot-tab__now {
+  position: absolute;
+  top: 6px; right: 8px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 1px 5px;
+  border-radius: 999px;
+  background: #f5c518;
+  color: #0a0a0f;
+}
+
+/* Light-mode tab colours */
+.tod-page--morning   .slot-tab,
+.tod-page--afternoon .slot-tab { color: #333; }
+.tod-page--morning   .slot-tab:hover,
+.tod-page--afternoon .slot-tab:hover { background: rgba(0,0,0,0.05); }
+
+/* Dark-mode tab colours */
+.tod-page--evening .slot-tab,
+.tod-page--night   .slot-tab { color: rgba(240,240,255,0.65); }
+.tod-page--evening .slot-tab:hover,
+.tod-page--night   .slot-tab:hover { background: rgba(255,255,255,0.06); color: #fff; }
+
+/* Active tab — palette colours */
+.slot-tab--morning.slot-tab--active   { border-bottom-color: #FF9A5C; color: #b05510; }
+.slot-tab--afternoon.slot-tab--active { border-bottom-color: #4A9FD5; color: #1a5f8a; }
+.slot-tab--evening.slot-tab--active   { border-bottom-color: #FF6B35; color: #ffa060; }
+.slot-tab--night.slot-tab--active     { border-bottom-color: #7c6fe0; color: #b3a9ff; }
+
+/* ── Results section ─────────────────────────────────────────────────────── */
+.tod-results { padding: 40px 24px 60px; }
+
+/* Controls */
+.tod-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+.tod-controls__label {
+  font-size: 13px;
+  font-weight: 500;
+}
+.tod-page--morning   .tod-controls__label,
+.tod-page--afternoon .tod-controls__label { color: #555; }
+.tod-page--evening   .tod-controls__label,
+.tod-page--night     .tod-controls__label { color: rgba(200,200,220,0.7); }
+
+.tod-controls__pills { display: flex; gap: 6px; }
+.tod-count-btn {
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'DM Sans', system-ui, sans-serif;
+}
+
+/* Light mode count buttons */
+.tod-page--morning   .tod-count-btn,
+.tod-page--afternoon .tod-count-btn {
+  border-color: #ccc; color: #555; background: transparent;
+}
+.tod-page--morning   .tod-count-btn:hover,
+.tod-page--afternoon .tod-count-btn:hover { border-color: #888; color: #111; }
+
+/* Dark mode count buttons */
+.tod-page--evening   .tod-count-btn,
+.tod-page--night     .tod-count-btn {
+  border-color: rgba(255,255,255,0.15);
+  color: rgba(200,200,220,0.6);
+  background: transparent;
+}
+.tod-page--evening   .tod-count-btn:hover,
+.tod-page--night     .tod-count-btn:hover { border-color: rgba(255,255,255,0.35); color: #fff; }
+
+/* Active count button */
+.tod-page--morning   .tod-count-btn--active { border-color: #FF9A5C; color: #b05510; background: rgba(255,154,92,0.1);  }
+.tod-page--afternoon .tod-count-btn--active { border-color: #4A9FD5; color: #1a5f8a; background: rgba(74,159,213,0.1); }
+.tod-page--evening   .tod-count-btn--active { border-color: #FF6B35; color: #FF9060; background: rgba(255,107,53,0.1);  }
+.tod-page--night     .tod-count-btn--active { border-color: #7c6fe0; color: #b3a9ff; background: rgba(124,111,224,0.1); }
+
+/* SectionHeader text colour on dark pages */
+.tod-page--evening .section-header__title,
+.tod-page--night   .section-header__title { color: #f0f0f5; }
+.tod-page--evening .section-header__sub,
+.tod-page--night   .section-header__sub   { color: rgba(170,170,200,0.7); }
+
+/* MovieCard border accent on dark pages */
+.tod-page--evening .movie-card,
+.tod-page--night   .movie-card { background: #16161f; border-color: #2a2a38; }
+
+/* ── All-slots preview strip ──────────────────────────────────────────────── */
+.tod-strip-section {
+  padding: 0 24px 80px;
+}
+
+.tod-strip-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 768px) { .tod-strip-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 480px) { .tod-strip-grid { grid-template-columns: 1fr; } }
+
+.tod-strip-card {
+  position: relative;
+  border-radius: 16px;
+  padding: 28px 20px 22px;
+  cursor: pointer;
+  text-align: left;
+  border: 2px solid transparent;
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+  overflow: hidden;
+  font-family: 'DM Sans', system-ui, sans-serif;
+}
+.tod-strip-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.3); }
+
+/* Palette backgrounds */
+.tod-strip-card--morning   { background: linear-gradient(135deg,#fff3e0,#ffdea8); color: #6b3300; }
+.tod-strip-card--afternoon { background: linear-gradient(135deg,#e3f0fb,#b3d8f5); color: #0a3d62; }
+.tod-strip-card--evening   { background: linear-gradient(135deg,#2d1520,#5c2a1a); color: #ffd0a0; }
+.tod-strip-card--night     { background: linear-gradient(135deg,#0d0d2b,#1e1e4e); color: #c8c8ff; }
+
+.tod-strip-card--active.tod-strip-card--morning   { border-color: #ff8c00; }
+.tod-strip-card--active.tod-strip-card--afternoon { border-color: #1a78c2; }
+.tod-strip-card--active.tod-strip-card--evening   { border-color: #ff5722; }
+.tod-strip-card--active.tod-strip-card--night     { border-color: #7c6fe0; }
+
+.tod-strip-card__emoji  { font-size: 36px; margin-bottom: 10px; display: block; }
+.tod-strip-card__label  { font-size: 18px; font-weight: 700; margin-bottom: 2px; font-family: 'Playfair Display', Georgia, serif; }
+.tod-strip-card__hours  { font-size: 11px; opacity: 0.6; margin-bottom: 8px; }
+.tod-strip-card__mood   { font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+.tod-strip-card__genres { font-size: 11px; opacity: 0.65; }
+
+.tod-strip-card__now-badge {
+  position: absolute;
+  top: 12px; right: 12px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 700;
+  background: #f5c518;
+  color: #0a0a0f;
+  letter-spacing: 0.04em;
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .tod-hero { height: 420px; }
+  .tod-hero__content { padding: 0 20px 28px; }
+  .live-clock { font-size: 22px; }
+  .tod-hero__title { font-size: 28px; }
+  .tod-results { padding: 28px 16px 40px; }
+}
