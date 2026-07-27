@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+__pycache__/
+*.pyc
+
+# Environment & Secrets
+.env
+backend/.env
+
+# Build outputs
+build/
+frontend/build/
+dist/
+*.egg-info/
+
+# System & OS
+.DS_Store
+Thumbs.db
+*.log
+scratch/
+expand_catalog.py
+start_servers.bat
