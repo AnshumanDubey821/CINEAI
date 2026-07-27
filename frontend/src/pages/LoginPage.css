@@ -1,0 +1,529 @@
+/* src/pages/LoginPage.css — Netflix Styled Login Page & Google Auth Dialog */
+.login-root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: #141414;
+  padding: 40px 20px;
+}
+
+/* Background */
+.login-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.login-bg__strips {
+  display: flex;
+  justify-content: space-around;
+  width: 120%;
+  height: 120%;
+  position: absolute;
+  top: -10%; left: -10%;
+}
+
+.film-strip {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: filmScroll var(--dur) linear infinite;
+  transform: translateY(var(--dir));
+}
+
+@keyframes filmScroll {
+  to { transform: translateY(var(--dir-end)); }
+}
+
+.film-strip__cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+  letter-spacing: 0.5px;
+}
+
+.login-bg__vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(20,20,20,0.6) 0%, rgba(20,20,20,0.95) 80%);
+}
+
+.login-bg__leak--red {
+  position: absolute;
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(229, 9, 20, 0.15) 0%, transparent 70%);
+  top: -200px; right: -200px;
+  filter: blur(80px);
+}
+
+/* Login Card */
+.login-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 440px;
+  background: rgba(0, 0, 0, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 48px 40px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(12px);
+}
+
+/* Logo */
+.login-logo {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.login-logo__text {
+  color: #E50914;
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.login-logo__text em {
+  font-style: normal;
+  color: #ffffff;
+}
+
+.login-tagline {
+  text-align: center;
+  font-size: 13px;
+  color: #aaaaaa;
+  margin-bottom: 24px;
+}
+
+/* Tabs */
+.login-tabs {
+  display: flex;
+  background: #181818;
+  border-radius: 4px;
+  padding: 4px;
+  margin-bottom: 20px;
+  border: 1px solid #333333;
+}
+
+.login-tab {
+  flex: 1;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #aaaaaa;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+}
+
+.login-tab--active {
+  background: #E50914;
+  color: #ffffff;
+}
+
+/* Banners */
+.login-success {
+  background: rgba(70, 211, 105, 0.15);
+  border: 1px solid #46d369;
+  color: #46d369;
+  padding: 10px 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.login-error {
+  background: rgba(229, 9, 20, 0.15);
+  border: 1px solid #E50914;
+  color: #ff6b6b;
+  padding: 10px 14px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* Google Button */
+.login-google-wrapper {
+  margin-bottom: 20px;
+}
+
+.login-google-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: #ffffff;
+  color: #000000;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 12px 20px;
+  border-radius: 4px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.login-google-btn:hover {
+  background: #e6e6e6;
+  transform: translateY(-2px);
+}
+
+.login-google-icon {
+  width: 20px; height: 20px;
+}
+
+/* Divider */
+.login-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #777777;
+  font-size: 11px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+.login-divider::before, .login-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #333333;
+}
+
+.login-divider span {
+  padding: 0 12px;
+}
+
+/* Form */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.login-field label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #cccccc;
+}
+
+.login-forgot {
+  font-size: 11px;
+  color: #E50914;
+  cursor: pointer;
+}
+
+.login-field input {
+  background: #333333;
+  border: 1px solid #444444;
+  border-radius: 4px;
+  padding: 12px 14px;
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.login-field input:focus {
+  border-color: #E50914;
+  background: #444444;
+}
+
+.login-pass-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.login-pass-wrap input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.login-pass-toggle {
+  position: absolute;
+  right: 12px;
+  font-size: 16px;
+  opacity: 0.7;
+}
+.login-pass-toggle:hover { opacity: 1; }
+
+/* Buttons */
+.login-submit {
+  width: 100%;
+  background: #E50914;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 13px;
+  border-radius: 4px;
+  margin-top: 8px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.login-submit:hover {
+  background: #b81d24;
+  transform: translateY(-2px);
+}
+
+.login-demo {
+  width: 100%;
+  margin-top: 16px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #e5e5e5;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: background 0.2s ease;
+}
+
+.login-demo:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.login-terms {
+  font-size: 11px;
+  color: #777777;
+  text-align: center;
+  margin-top: 20px;
+  line-height: 1.4;
+}
+
+.login-spinner {
+  display: inline-block;
+  width: 18px; height: 18px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+/* ── GOOGLE INTERACTIVE POPUP MODAL STYLES ─────────────────────────── */
+.g-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.g-modal-card {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  color: #1f1f1f;
+  border-radius: 12px;
+  padding: 32px 36px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  position: relative;
+}
+
+.g-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.g-modal-logo {
+  width: 36px; height: 36px;
+}
+
+.g-modal-close {
+  font-size: 18px;
+  color: #5f6368;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 50%;
+}
+.g-modal-close:hover { background: #f1f3f4; }
+
+.g-modal-title {
+  font-size: 22px;
+  font-weight: 500;
+  color: #202124;
+  margin-bottom: 4px;
+}
+
+.g-modal-sub {
+  font-size: 14px;
+  color: #5f6368;
+  margin-bottom: 24px;
+}
+
+.g-modal-error {
+  background: #fce8e6;
+  color: #c5221f;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+.g-modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.g-field {
+  position: relative;
+}
+
+.g-input {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 15px;
+  color: #202124;
+  background: #ffffff;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.g-input:focus {
+  border-color: #1a73e8;
+  box-shadow: 0 0 0 1px #1a73e8;
+}
+
+.g-info-link {
+  color: #1a73e8;
+  font-weight: 500;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.g-hint {
+  font-size: 12px;
+  color: #5f6368;
+  line-height: 1.4;
+  margin-top: 8px;
+}
+
+.g-modal-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.g-btn-text {
+  color: #1a73e8;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+.g-btn-text:hover { background: #f1f8fe; }
+
+.g-btn-blue {
+  background: #1a73e8;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 24px;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+.g-btn-blue:hover { background: #1557b0; }
+
+/* User Chip */
+.g-user-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px;
+  border: 1px solid #dadce0;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+.g-user-chip:hover { background: #f8f9fa; }
+
+.g-user-avatar {
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  background: #1a73e8;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.g-user-email {
+  font-size: 13px;
+  font-weight: 500;
+  color: #3c4043;
+}
+
+.g-user-change {
+  font-size: 10px;
+  color: #5f6368;
+}
+
+.g-show-pass {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #3c4043;
+  cursor: pointer;
+}
+
+/* Verifying Progress Bar */
+.g-verifying {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 0;
+  gap: 16px;
+}
+
+.g-progress-bar {
+  width: 100%;
+  height: 4px;
+  background: #e8eaed;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.g-progress-fill {
+  width: 50%;
+  height: 100%;
+  background: #1a73e8;
+  animation: gProgress 1.2s infinite ease-in-out;
+}
+
+@keyframes gProgress {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(250%); }
+}
