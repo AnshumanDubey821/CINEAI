@@ -1,0 +1,428 @@
+movieId,title,genres
+1,The Shawshank Redemption (1994),Drama
+2,The Godfather (1972),Crime|Drama
+3,The Dark Knight (2008),Action|Crime|Drama
+4,Pulp Fiction (1994),Crime|Drama
+5,Schindler's List (1993),Biography|Drama|History
+6,The Lord of the Rings: The Return of the King (2003),Action|Adventure|Fantasy
+7,12 Angry Men (1957),Drama
+8,The Good the Bad and the Ugly (1966),Western
+9,Forrest Gump (1994),Drama|Romance
+10,Fight Club (1999),Drama|Mystery|Thriller
+11,Inception (2010),Action|Adventure|Sci-Fi
+12,The Matrix (1999),Action|Sci-Fi
+13,Goodfellas (1990),Biography|Crime|Drama
+14,Star Wars: Episode V (1980),Action|Adventure|Fantasy|Sci-Fi
+15,Interstellar (2014),Adventure|Drama|Sci-Fi
+16,One Flew Over the Cuckoo's Nest (1975),Drama
+17,Parasite (2019),Comedy|Drama|Thriller
+18,Spirited Away (2001),Animation|Adventure|Family|Fantasy
+19,Saving Private Ryan (1998),Drama|War
+20,The Silence of the Lambs (1991),Crime|Drama|Thriller
+21,Life Is Beautiful (1997),Comedy|Drama|Romance|War
+22,City of God (2002),Crime|Drama
+23,The Green Mile (1999),Crime|Drama|Fantasy|Mystery
+24,Whiplash (2014),Drama|Music
+25,The Prestige (2006),Drama|Mystery|Sci-Fi|Thriller
+26,The Lion King (1994),Animation|Adventure|Drama|Family|Musical
+27,Gladiator (2000),Action|Adventure|Drama
+28,The Departed (2006),Crime|Drama|Mystery|Thriller
+29,Casablanca (1942),Drama|Romance|War
+30,The Pianist (2002),Biography|Drama|Music|War
+31,Avengers: Endgame (2019),Action|Adventure|Sci-Fi
+32,Back to the Future (1985),Adventure|Comedy|Sci-Fi
+33,Joker (2019),Crime|Drama|Thriller
+34,The Wolf of Wall Street (2013),Biography|Comedy|Crime|Drama
+35,Django Unchained (2012),Drama|Western
+36,Inglourious Basterds (2009),Adventure|Drama|War
+37,The Truman Show (1998),Comedy|Drama|Sci-Fi
+38,A Beautiful Mind (2001),Biography|Drama|Mystery
+39,American History X (1998),Crime|Drama
+40,Heat (1995),Action|Crime|Drama|Thriller
+41,Eternal Sunshine of the Spotless Mind (2004),Drama|Romance|Sci-Fi
+42,2001: A Space Odyssey (1968),Mystery|Sci-Fi
+43,Alien (1979),Horror|Sci-Fi|Thriller
+44,No Country for Old Men (2007),Crime|Drama|Thriller
+45,Apocalypse Now (1979),Drama|War
+46,The Shining (1980),Drama|Horror
+47,Memento (2000),Mystery|Thriller
+48,Raiders of the Lost Ark (1981),Action|Adventure
+49,Taxi Driver (1976),Crime|Drama
+50,Blade Runner (1982),Sci-Fi|Thriller
+51,Toy Story (1995),Animation|Adventure|Comedy|Family|Fantasy
+52,Up (2009),Animation|Adventure|Comedy|Drama|Family|Fantasy
+53,WALL-E (2008),Animation|Adventure|Family|Romance|Sci-Fi
+54,Finding Nemo (2003),Animation|Adventure|Comedy|Family
+55,The Incredibles (2004),Animation|Action|Adventure|Comedy|Family|Sci-Fi
+56,Inside Out (2015),Animation|Adventure|Comedy|Drama|Family|Fantasy
+57,Coco (2017),Animation|Adventure|Comedy|Drama|Family|Fantasy|Music
+58,Ratatouille (2007),Animation|Comedy|Family
+59,Monsters Inc (2001),Animation|Adventure|Comedy|Family|Fantasy
+60,A Bug's Life (1998),Animation|Adventure|Comedy|Family
+61,Iron Man (2008),Action|Adventure|Sci-Fi
+62,Captain America: Civil War (2016),Action|Adventure|Sci-Fi
+63,Black Panther (2018),Action|Adventure|Sci-Fi
+64,Thor: Ragnarok (2017),Action|Adventure|Comedy|Sci-Fi
+65,Guardians of the Galaxy (2014),Action|Adventure|Comedy|Sci-Fi
+66,Spider-Man: Into the Spider-Verse (2018),Animation|Action|Adventure|Comedy|Family|Sci-Fi
+67,Doctor Strange (2016),Action|Adventure|Fantasy|Sci-Fi
+68,The Avengers (2012),Action|Adventure|Sci-Fi
+69,Ant-Man (2015),Action|Adventure|Comedy|Sci-Fi
+70,Wonder Woman (2017),Action|Adventure|Fantasy|War
+71,The Dark Knight Rises (2012),Action|Crime|Drama|Thriller
+72,Batman v Superman (2016),Action|Adventure|Sci-Fi
+73,Aquaman (2018),Action|Adventure|Fantasy|Sci-Fi
+74,Shazam! (2019),Action|Adventure|Comedy|Fantasy|Sci-Fi
+75,Jaws (1975),Adventure|Mystery|Thriller
+76,E.T. the Extra-Terrestrial (1982),Adventure|Family|Sci-Fi
+77,Jurassic Park (1993),Action|Adventure|Sci-Fi|Thriller
+78,Schindler's List (1993),Biography|Drama|History
+79,Catch Me If You Can (2002),Biography|Crime|Drama
+80,Munich (2005),Action|Drama|History|Thriller
+81,Lincoln (2012),Biography|Drama|History
+82,Bridge of Spies (2015),Biography|Drama|History|Thriller
+83,The Post (2017),Biography|Drama|History|Thriller
+84,West Side Story (2021),Crime|Drama|Musical|Romance
+85,Ready Player One (2018),Action|Adventure|Sci-Fi
+86,Minority Report (2002),Action|Crime|Mystery|Sci-Fi|Thriller
+87,A.I. Artificial Intelligence (2001),Adventure|Drama|Sci-Fi
+88,Empire of the Sun (1987),Adventure|Biography|Drama|War
+89,The Mask of Zorro (1998),Action|Adventure|Romance
+90,Se7en (1995),Crime|Drama|Mystery|Thriller
+91,Zodiac (2007),Crime|Drama|Mystery|Thriller
+92,Gone Girl (2014),Drama|Mystery|Thriller
+93,The Girl with the Dragon Tattoo (2011),Crime|Drama|Mystery|Thriller
+94,Prisoners (2013),Crime|Drama|Mystery|Thriller
+95,Knives Out (2019),Comedy|Crime|Drama|Mystery|Thriller
+96,Get Out (2017),Horror|Mystery|Thriller
+97,A Quiet Place (2018),Drama|Horror|Sci-Fi|Thriller
+98,Hereditary (2018),Drama|Horror|Mystery|Thriller
+99,Midsommar (2019),Drama|Horror|Mystery
+100,The Witch (2015),Fantasy|Horror|Mystery
+101,It (2017),Drama|Horror
+102,Doctor Sleep (2019),Drama|Fantasy|Horror
+103,The Conjuring (2013),Horror|Mystery|Thriller
+104,Insidious (2010),Horror|Mystery|Thriller
+105,Annabelle (2014),Horror|Mystery|Thriller
+106,The Nun (2018),Horror|Mystery|Thriller
+107,Sinister (2012),Horror|Mystery|Thriller
+108,Ouija (2014),Horror|Mystery|Thriller
+109,La La Land (2016),Comedy|Drama|Music|Musical|Romance
+110,Whiplash (2014),Drama|Music
+111,Black Swan (2010),Drama|Thriller
+112,Birdman (2014),Comedy|Drama
+113,The Artist (2011),Comedy|Drama|Romance
+114,Moulin Rouge (2001),Drama|Musical|Romance
+115,Chicago (2002),Comedy|Crime|Musical
+116,Les Misérables (2012),Drama|Musical|Romance|War
+117,The Greatest Showman (2017),Biography|Drama|Musical
+118,Bohemian Rhapsody (2018),Biography|Drama|Music
+119,Rocketman (2019),Biography|Drama|Fantasy|Music|Musical|Romance
+120,Walk the Line (2005),Biography|Drama|Music|Romance
+121,Ray (2004),Biography|Drama|Music
+122,Straight Outta Compton (2015),Biography|Drama|Music
+123,8 Mile (2002),Drama|Music
+124,Almost Famous (2000),Adventure|Comedy|Drama|Music|Romance
+125,School of Rock (2003),Comedy|Music
+126,High Fidelity (2000),Comedy|Drama|Music|Romance
+127,Once (2006),Drama|Music|Romance
+128,Begin Again (2013),Drama|Music|Romance
+129,Sound of Metal (2019),Drama|Music
+130,Titanic (1997),Drama|Romance
+131,The Notebook (2004),Drama|Romance
+132,Pride and Prejudice (2005),Drama|Romance
+133,Atonement (2007),Drama|Romance|War
+134,The English Patient (1996),Drama|Romance|War
+135,Before Sunrise (1995),Drama|Romance
+136,Before Sunset (2004),Drama|Romance
+137,Before Midnight (2013),Drama|Romance
+138,500 Days of Summer (2009),Comedy|Drama|Romance
+139,Crazy Stupid Love (2011),Comedy|Drama|Romance
+140,Silver Linings Playbook (2012),Comedy|Drama|Romance
+141,Her (2013),Drama|Romance|Sci-Fi
+142,The Shape of Water (2017),Drama|Fantasy|Romance|Sci-Fi
+143,Portrait of a Lady on Fire (2019),Drama|Romance
+144,Call Me by Your Name (2017),Drama|Romance
+145,Brokeback Mountain (2005),Drama|Romance
+146,Carol (2015),Drama|Romance
+147,Moonlight (2016),Drama
+148,Marriage Story (2019),Drama|Romance
+149,Blue Valentine (2010),Drama|Romance
+150,Requiem for a Dream (2000),Drama
+151,Trainspotting (1996),Crime|Drama
+152,Irreversible (2002),Crime|Drama|Mystery|Thriller
+153,Oldboy (2003),Action|Drama|Mystery|Thriller
+154,The Handmaiden (2016),Drama|Mystery|Romance|Thriller
+155,Burning (2018),Drama|Mystery|Thriller
+156,Shoplifters (2018),Crime|Drama
+157,Drive My Car (2021),Drama
+158,Roma (2018),Drama
+159,Y Tu Mamá También (2001),Adventure|Drama|Romance
+160,Amores Perros (2000),Action|Crime|Drama|Thriller
+161,Pan's Labyrinth (2006),Drama|Fantasy|War
+162,The Revenant (2015),Action|Adventure|Drama|Western
+163,Once Upon a Time in Hollywood (2019),Comedy|Drama
+164,Hateful Eight (2015),Crime|Drama|Mystery|Western
+165,True Grit (2010),Adventure|Drama|Western
+166,Dances with Wolves (1990),Adventure|Drama|Western
+167,Unforgiven (1992),Drama|Western
+168,Tombstone (1993),Action|Biography|Drama|History|Western
+169,3:10 to Yuma (2007),Action|Drama|Western|Thriller
+170,Hostiles (2017),Drama|War|Western
+171,Bone Tomahawk (2015),Horror|Mystery|Western
+172,Hell or High Water (2016),Crime|Drama|Western
+173,Wind River (2017),Crime|Drama|Mystery|Thriller
+174,Sicario (2015),Action|Crime|Drama|Thriller
+175,Traffic (2000),Crime|Drama|Thriller
+176,Narcos (Film) (2015),Crime|Drama|Thriller
+177,Elite Squad (2007),Action|Crime|Drama|Thriller
+178,Chinatown (1974),Drama|Mystery|Thriller
+179,L.A. Confidential (1997),Crime|Drama|Mystery|Thriller
+180,Mulholland Drive (2001),Drama|Mystery|Romance|Thriller
+181,Blue Velvet (1986),Crime|Drama|Mystery|Thriller
+182,Fargo (1996),Crime|Drama|Thriller
+183,The Big Lebowski (1998),Comedy|Crime
+184,Burn After Reading (2008),Comedy|Crime|Drama
+185,No Country for Old Men (2007),Crime|Drama|Thriller
+186,Blood Simple (1984),Crime|Drama|Thriller
+187,Barton Fink (1991),Drama|Mystery|Thriller
+188,A Serious Man (2009),Comedy|Drama|Mystery
+189,True Grit (2010),Adventure|Drama|Western
+190,Inside Llewyn Davis (2013),Drama|Music
+191,Bridge of Spies (2015),Biography|Drama|History|Thriller
+192,Hail Caesar! (2016),Comedy|Drama|Mystery
+193,Knives Out (2019),Comedy|Crime|Drama|Mystery|Thriller
+194,Glass Onion (2022),Comedy|Crime|Drama|Mystery|Thriller
+195,The Menu (2022),Comedy|Drama|Horror|Mystery|Thriller
+196,Everything Everywhere All at Once (2022),Action|Adventure|Comedy|Drama|Fantasy|Sci-Fi
+197,The Banshees of Inisherin (2022),Comedy|Drama
+198,Tar (2022),Drama|Music|Mystery|Thriller
+199,The Whale (2022),Drama
+200,Aftersun (2022),Drama
+201,Causeway (2022),Drama
+202,Women Talking (2022),Drama
+203,All Quiet on the Western Front (2022),Action|Drama|War
+204,Triangle of Sadness (2022),Comedy|Drama|Romance
+205,The Fabelmans (2022),Biography|Drama
+206,Avatar (2009),Action|Adventure|Fantasy|Sci-Fi
+207,Avatar: The Way of Water (2022),Action|Adventure|Fantasy|Sci-Fi
+208,Top Gun: Maverick (2022),Action|Drama
+209,Elvis (2022),Biography|Drama|Music
+210,RRR (2022),Action|Adventure|Drama
+211,The Kashmir Files (2022),Drama|History|War
+212,KGF Chapter 2 (2022),Action|Crime|Drama
+213,Pushpa: The Rise (2021),Action|Crime|Drama|Thriller
+214,Dune (2021),Action|Adventure|Drama|Sci-Fi
+215,No Time to Die (2021),Action|Adventure|Thriller
+216,The French Dispatch (2021),Comedy|Drama|Romance
+217,Licorice Pizza (2021),Comedy|Drama|Romance
+218,Spencer (2021),Biography|Drama
+219,Titane (2021),Crime|Drama|Horror|Mystery|Sci-Fi|Thriller
+220,The Power of the Dog (2021),Drama|Western
+221,Pig (2021),Drama|Mystery|Thriller
+222,Riders of Justice (2020),Action|Comedy|Crime|Drama|Thriller
+223,Tenet (2020),Action|Adventure|Sci-Fi|Thriller
+224,The Trial of the Chicago 7 (2020),Biography|Drama|History|Thriller
+225,Mank (2020),Biography|Drama|History
+226,Nomadland (2020),Drama
+227,Soul (2020),Animation|Adventure|Comedy|Drama|Family|Fantasy|Music
+228,Onward (2020),Animation|Adventure|Comedy|Drama|Family|Fantasy
+229,Freaky (2020),Comedy|Horror|Mystery|Thriller
+230,Palm Springs (2020),Comedy|Mystery|Romance|Sci-Fi
+231,The Lighthouse (2019),Drama|Fantasy|Horror|Mystery|Thriller
+232,Ad Astra (2019),Adventure|Drama|Mystery|Sci-Fi|Thriller
+233,Ford v Ferrari (2019),Action|Biography|Drama|Sport
+234,1917 (2019),Drama|War
+235,Little Women (2019),Drama|Romance
+236,Uncut Gems (2019),Crime|Drama|Thriller
+237,The Irishman (2019),Biography|Crime|Drama
+238,Us (2019),Horror|Mystery|Thriller
+239,Booksmart (2019),Comedy
+240,Waves (2019),Drama
+241,Marriage Story (2019),Drama|Romance
+242,Midsommar (2019),Drama|Horror|Mystery
+243,Avengers: Infinity War (2018),Action|Adventure|Sci-Fi
+244,A Star Is Born (2018),Drama|Music|Romance
+245,Roma (2018),Drama
+246,Hereditary (2018),Drama|Horror|Mystery|Thriller
+247,Burning (2018),Drama|Mystery|Thriller
+248,Annihilation (2018),Adventure|Drama|Horror|Mystery|Sci-Fi|Thriller
+249,Three Billboards Outside Ebbing Missouri (2017),Crime|Drama
+250,Dunkirk (2017),Action|Drama|History|Thriller|War
+251,Call Me by Your Name (2017),Drama|Romance
+252,Lady Bird (2017),Comedy|Drama
+253,Get Out (2017),Horror|Mystery|Thriller
+254,Logan (2017),Action|Drama|Sci-Fi|Thriller
+255,The Florida Project (2017),Drama
+256,Arrival (2016),Drama|Mystery|Sci-Fi|Thriller
+257,La La Land (2016),Comedy|Drama|Music|Musical|Romance
+258,Moonlight (2016),Drama
+259,Hell or High Water (2016),Crime|Drama|Western
+260,Nocturnal Animals (2016),Drama|Mystery|Thriller
+261,Manchester by the Sea (2016),Drama
+262,The Revenant (2015),Action|Adventure|Drama|Western
+263,Mad Max: Fury Road (2015),Action|Adventure|Sci-Fi|Thriller
+264,The Martian (2015),Adventure|Drama|Sci-Fi
+265,Inside Out (2015),Animation|Adventure|Comedy|Drama|Family|Fantasy
+266,Ex Machina (2014),Drama|Mystery|Sci-Fi|Thriller
+267,Birdman (2014),Comedy|Drama
+268,Gone Girl (2014),Drama|Mystery|Thriller
+269,The Grand Budapest Hotel (2014),Adventure|Comedy|Crime|Drama|Mystery
+270,Boyhood (2014),Drama
+271,Nightcrawler (2014),Crime|Drama|Thriller
+272,Whiplash (2014),Drama|Music
+273,Her (2013),Drama|Romance|Sci-Fi
+274,Gravity (2013),Drama|Sci-Fi|Thriller
+275,12 Years a Slave (2013),Biography|Drama|History
+276,The Wolf of Wall Street (2013),Biography|Comedy|Crime|Drama
+277,Before Midnight (2013),Drama|Romance
+278,Nebraska (2013),Adventure|Drama
+279,Django Unchained (2012),Drama|Western
+280,Argo (2012),Biography|Drama|History|Thriller
+281,Zero Dark Thirty (2012),Drama|History|Thriller
+282,Looper (2012),Action|Drama|Sci-Fi|Thriller
+283,Moonrise Kingdom (2012),Adventure|Comedy|Drama|Romance
+284,Amour (2012),Drama|Romance
+285,Drive (2011),Crime|Drama
+286,The Tree of Life (2011),Drama|Fantasy
+287,Hugo (2011),Adventure|Drama|Family|Mystery
+288,Moneyball (2011),Biography|Drama|Sport
+289,The Artist (2011),Comedy|Drama|Romance
+290,Tinker Tailor Soldier Spy (2011),Drama|Mystery|Thriller
+291,Black Swan (2010),Drama|Thriller
+292,Inception (2010),Action|Adventure|Sci-Fi
+293,The Social Network (2010),Biography|Drama
+294,True Grit (2010),Adventure|Drama|Western
+295,Winter's Bone (2010),Crime|Drama|Mystery|Thriller
+296,A Prophet (2009),Crime|Drama|Thriller
+297,The Hurt Locker (2008),Drama|History|Thriller|War
+298,Let the Right One In (2008),Drama|Fantasy|Horror|Romance
+299,WALL-E (2008),Animation|Adventure|Family|Romance|Sci-Fi
+300,The Dark Knight (2008),Action|Crime|Drama
+301,In Bruges (2008),Comedy|Crime|Drama|Thriller
+302,Zodiac (2007),Crime|Drama|Mystery|Thriller
+303,No Country for Old Men (2007),Crime|Drama|Thriller
+304,There Will Be Blood (2007),Drama
+305,Michael Clayton (2007),Drama|Mystery|Thriller
+306,The Lives of Others (2006),Drama|Thriller
+307,Pan's Labyrinth (2006),Drama|Fantasy|War
+308,Children of Men (2006),Action|Drama|Sci-Fi|Thriller
+309,The Departed (2006),Crime|Drama|Mystery|Thriller
+310,United 93 (2006),Drama|History|Thriller
+311,Munich (2005),Action|Drama|History|Thriller
+312,Cache (2005),Drama|Mystery|Thriller
+313,A History of Violence (2005),Action|Crime|Drama|Thriller
+314,Eternal Sunshine of the Spotless Mind (2004),Drama|Romance|Sci-Fi
+315,Before Sunset (2004),Drama|Romance
+316,Million Dollar Baby (2004),Drama|Sport
+317,Sideways (2004),Adventure|Comedy|Drama|Romance
+318,Lost in Translation (2003),Drama|Romance
+319,Oldboy (2003),Action|Drama|Mystery|Thriller
+320,City of God (2002),Crime|Drama
+321,Adaptation (2002),Comedy|Drama
+322,Talk to Her (2002),Drama|Romance
+323,Mulholland Drive (2001),Drama|Mystery|Romance|Thriller
+324,Amélie (2001),Comedy|Romance
+325,Memento (2000),Mystery|Thriller
+326,Requiem for a Dream (2000),Drama
+327,Almost Famous (2000),Adventure|Comedy|Drama|Music|Romance
+328,In the Mood for Love (2000),Drama|Romance
+329,American Beauty (1999),Drama|Romance
+330,Fight Club (1999),Drama|Mystery|Thriller
+331,Being John Malkovich (1999),Comedy|Drama|Fantasy
+332,Eyes Wide Shut (1999),Drama|Mystery|Thriller
+333,The Sixth Sense (1999),Drama|Mystery|Thriller
+334,Three Colors: Blue (1993),Drama|Music|Mystery
+335,Short Cuts (1993),Drama
+336,Groundhog Day (1993),Comedy|Drama|Fantasy|Romance
+337,The Piano (1993),Drama|Music|Romance
+338,Baraka (1992),Documentary
+339,Reservoir Dogs (1992),Crime|Drama|Thriller
+340,Unforgiven (1992),Drama|Western
+341,The Silence of the Lambs (1991),Crime|Drama|Thriller
+342,Raise the Red Lantern (1991),Drama
+343,Goodfellas (1990),Biography|Crime|Drama
+344,Cinema Paradiso (1988),Drama|Romance
+345,Wings of Desire (1987),Drama|Fantasy|Romance
+346,Platoon (1986),Drama|War
+347,Hannah and Her Sisters (1986),Comedy|Drama|Romance
+348,Come and See (1985),Drama|War
+349,Paris Texas (1984),Adventure|Drama
+350,The Right Stuff (1983),Biography|Drama|History
+351,Gandhi (1982),Biography|Drama|History
+352,E.T. (1982),Adventure|Family|Sci-Fi
+353,Reds (1981),Biography|Drama|History|Romance|War
+354,Raging Bull (1980),Biography|Drama|Sport
+355,The Elephant Man (1980),Biography|Drama
+356,Kramer vs. Kramer (1979),Drama
+357,Manhattan (1979),Comedy|Drama|Romance
+358,All the President's Men (1976),Biography|Drama|History|Thriller
+359,Rocky (1976),Drama|Sport
+360,Dog Day Afternoon (1975),Biography|Crime|Drama|Thriller
+361,One Flew Over the Cuckoo's Nest (1975),Drama
+362,The Godfather Part II (1974),Crime|Drama
+363,Chinatown (1974),Drama|Mystery|Thriller
+364,American Graffiti (1973),Comedy|Drama
+365,The Exorcist (1973),Horror
+366,Badlands (1973),Action|Biography|Crime|Drama
+367,The Godfather (1972),Crime|Drama
+368,A Clockwork Orange (1971),Crime|Drama|Sci-Fi
+369,Patton (1970),Biography|Drama|History|War
+370,Midnight Cowboy (1969),Drama
+371,2001 A Space Odyssey (1968),Mystery|Sci-Fi
+372,The Graduate (1967),Comedy|Drama|Romance
+373,Bonnie and Clyde (1967),Action|Biography|Crime|Drama
+374,The Good the Bad and the Ugly (1966),Western
+375,Dr. Strangelove (1964),Comedy|Drama|War
+376,8 1/2 (1963),Drama|Fantasy
+377,To Kill a Mockingbird (1962),Drama
+378,Psycho (1960),Horror|Mystery|Thriller
+379,La Dolce Vita (1960),Drama|Romance
+380,Ben-Hur (1959),Action|Adventure|Drama|History|Romance
+381,Vertigo (1958),Mystery|Romance|Thriller
+382,The Seventh Seal (1957),Drama|Fantasy
+383,12 Angry Men (1957),Drama
+384,Rear Window (1954),Crime|Mystery|Thriller
+385,Seven Samurai (1954),Action|Adventure|Drama
+386,Sunset Boulevard (1950),Drama|Film-Noir
+387,All About Eve (1950),Drama
+388,Bicycle Thieves (1948),Drama
+389,Citizen Kane (1941),Drama|Mystery
+390,Oppenheimer (2023),Biography|Drama|History
+391,Barbie (2023),Adventure|Comedy|Fantasy
+392,Dune: Part Two (2024),Action|Adventure|Sci-Fi
+393,Inside Out 2 (2024),Animation|Adventure|Comedy
+394,Deadpool & Wolverine (2024),Action|Comedy|Sci-Fi
+395,Gladiator II (2024),Action|Adventure|Drama
+396,Spider-Man: Across the Spider-Verse (2023),Animation|Action|Adventure
+397,Poor Things (2023),Comedy|Drama|Romance
+398,Past Lives (2023),Drama|Romance
+399,Killers of the Flower Moon (2023),Crime|Drama|History
+400,Godzilla Minus One (2023),Action|Adventure|Drama
+401,Challengers (2024),Drama|Romance|Sport
+402,Furiosa: A Mad Max Saga (2024),Action|Adventure|Sci-Fi
+403,Alien: Romulus (2024),Horror|Sci-Fi|Thriller
+404,The Substance (2024),Drama|Horror|Sci-Fi
+405,Wicked (2024),Fantasy|Musical|Romance
+406,Twisters (2024),Action|Adventure|Thriller
+407,Breaking Bad (2008),Web Series|Crime|Drama|Thriller
+408,Game of Thrones (2011),Web Series|Action|Adventure|Drama
+409,Stranger Things (2016),Web Series|Drama|Fantasy|Horror
+410,The Last of Us (2023),Web Series|Action|Adventure|Drama
+411,Succession (2018),Web Series|Drama
+412,Squid Game (2021),Web Series|Action|Drama|Mystery
+413,Shogun (2024),Web Series|Adventure|Drama|History
+414,Severance (2022),Web Series|Drama|Mystery|Sci-Fi
+415,The Boys (2019),Web Series|Action|Comedy|Drama
+416,Wednesday (2022),Web Series|Comedy|Crime|Fantasy
+417,Loki (2021),Web Series|Action|Adventure|Fantasy
+418,House of the Dragon (2022),Web Series|Action|Adventure|Drama
+419,Chernobyl (2019),Web Series|Drama|History|Thriller
+420,Better Call Saul (2015),Web Series|Crime|Drama
+421,The Bear (2022),Web Series|Comedy|Drama
+422,Euphoria (2019),Web Series|Drama
+423,Peaky Blinders (2013),Web Series|Crime|Drama
+424,Dark (2017),Web Series|Crime|Drama|Mystery
+425,Money Heist (2017),Web Series|Action|Crime|Drama
+426,Sherlock (2010),Web Series|Crime|Drama|Mystery
+427,Fleabag (2016),Web Series|Comedy|Drama
