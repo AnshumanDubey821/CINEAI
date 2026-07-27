@@ -1,0 +1,13 @@
+/* src/App.css */
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.app-main {
+  flex: 1;
+  padding-top: 70px; /* height of navbar */
+}
