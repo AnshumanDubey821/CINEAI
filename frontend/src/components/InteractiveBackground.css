@@ -1,0 +1,85 @@
+/* src/components/InteractiveBackground.css */
+.interactive-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+  background: #08080c;
+}
+
+/* Mouse-tracking cursor aura glow */
+.interactive-bg__cursor-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245, 197, 24, 0.08) 0%, rgba(124, 111, 224, 0.05) 45%, transparent 70%);
+  transform: translate(-50%, -50%);
+  transition: left 0.15s ease-out, top 0.15s ease-out;
+  filter: blur(40px);
+}
+
+/* Floating ambient blobs */
+.interactive-bg__blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.28;
+  animation: floatBg 20s ease-in-out infinite alternate;
+}
+
+.interactive-bg__blob--gold {
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, #f5c518 0%, #d4a017 100%);
+  top: -100px; left: -100px;
+  animation-duration: 18s;
+}
+
+.interactive-bg__blob--purple {
+  width: 650px; height: 650px;
+  background: radial-gradient(circle, #7c6fe0 0%, #3b2b80 100%);
+  bottom: -150px; right: -100px;
+  animation-duration: 24s;
+  animation-delay: -5s;
+}
+
+.interactive-bg__blob--blue {
+  width: 550px; height: 550px;
+  background: radial-gradient(circle, #113ccf 0%, #001253 100%);
+  top: 40%; right: 10%;
+  animation-duration: 22s;
+  animation-delay: -10s;
+}
+
+.interactive-bg__blob--teal {
+  width: 480px; height: 480px;
+  background: radial-gradient(circle, #2ec4b6 0%, #0f5257 100%);
+  bottom: 20%; left: 5%;
+  animation-duration: 26s;
+  animation-delay: -15s;
+}
+
+@keyframes floatBg {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(60px, -40px) scale(1.12);
+  }
+  100% {
+    transform: translate(-40px, 50px) scale(0.95);
+  }
+}
+
+/* Subtle grid line overlay */
+.interactive-bg__grid {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse at center, black 40%, transparent 85%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 85%);
+}
