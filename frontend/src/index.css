@@ -1,0 +1,182 @@
+/* src/index.css — Netflix Inspired Premium Theme for CineAI */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap');
+
+:root {
+  --bg-primary: #141414;
+  --bg-secondary: #181818;
+  --bg-card: #222222;
+  --bg-card-hover: #2a2a2a;
+  --accent-red: #E50914;
+  --accent-red-hover: #B81D24;
+  --accent-gold: #f5c518;
+  --accent-green: #46d369;
+  --text-primary: #ffffff;
+  --text-secondary: #bcbcbc;
+  --text-muted: #777777;
+  --border: #2f2f2f;
+  --border-light: #444444;
+  --radius: 8px;
+  --radius-sm: 4px;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --shadow-netflix: 0 10px 30px rgba(0, 0, 0, 0.8);
+  --transition: 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-primary);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-body);
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+input, select, textarea {
+  font-family: var(--font-body);
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: #333333;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-red);
+}
+
+/* Netflix Container */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+
+/* Netflix Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 24px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 15px;
+  transition: all var(--transition);
+  cursor: pointer;
+}
+
+.btn--primary {
+  background: var(--accent-red);
+  color: #ffffff;
+}
+.btn--primary:hover {
+  background: var(--accent-red-hover);
+  transform: scale(1.03);
+}
+
+.btn--light {
+  background: #ffffff;
+  color: #000000;
+}
+.btn--light:hover {
+  background: rgba(255, 255, 255, 0.75);
+  transform: scale(1.03);
+}
+
+.btn--secondary {
+  background: rgba(109, 109, 110, 0.7);
+  color: #ffffff;
+  backdrop-filter: blur(8px);
+}
+.btn--secondary:hover {
+  background: rgba(109, 109, 110, 0.4);
+  transform: scale(1.03);
+}
+
+/* Netflix Match Badge */
+.match-badge {
+  color: var(--accent-green);
+  font-weight: 800;
+  font-size: 13px;
+}
+
+/* Netflix Maturity / Quality Badges */
+.badge-maturity {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 1px 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #e5e5e5;
+  border-radius: 2px;
+}
+
+.badge-hd {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 1px 4px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #e5e5e5;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+
+/* Genre pill */
+.genre-pill {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  white-space: nowrap;
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease both;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
